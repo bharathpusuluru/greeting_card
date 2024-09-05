@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter  </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                    <strong> Dear Jyotsna Rani Ma'am,</strong>
+                        <br>
+                        <br>
+                        I wish you a very Happy Teacher's Day! <br>Thank you for being such an inspiring guide and for always encouraging me to do my best in my studies. You truly are the best teacher, and I'm so grateful for all your support and wisdom.
+                        <p style='text-align:center'>
+                            <span style='font-size:50px;'>&#128522;</span>
+                        </p>
+                           
+                        </p>
+                        
+                      
+                </div>
+            </div>
+            <div class="heart"></div>
+          
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+        document.querySelector('.heart').addEventListener('click', function() {
+    document.querySelector('.heart-text').style.display = 'none';
+    // Trigger your popup action here
+});
+
+// If you want the heart text to also respond to clicks,
+// add a similar event listener to '.heart-text' itself
+document.querySelector('.heart-text').addEventListener('click', function() {
+    this.style.display = 'none';
+    // Trigger your popup action here, if needed
+});
+document.querySelector('.heart').addEventListener('click', function() {
+    const heartText = document.querySelector('.heart-text');
+    if (heartText) heartText.remove(); // Removes the element
+    // Trigger your popup action here
+});
+
+// Similar to hiding, if you want '.heart-text' clicks to remove it,
+// you can add an event listener directly on that element
+document.querySelector('.heart-text').addEventListener('click', function() {
+    this.remove(); // Removes the element
+    // Trigger your popup action here, if needed
+});
+
+    </script>
+</body>
+
+</html>
